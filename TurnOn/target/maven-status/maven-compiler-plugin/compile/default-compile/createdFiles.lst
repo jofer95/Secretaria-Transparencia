@@ -1,0 +1,3 @@
+com\ub\turnon\Services.class
+com\ub\turnon\models\ModelTurnedOn.class
+org\netbeans\rest\application\config\ApplicationConfig.class
