@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="st" transaction-type="RESOURCE_LOCAL">
+    <!--  secretaria de trasparencia -->
+    <class>com.ub.st.entities.negocio.Usuario</class>
+    <class>com.ub.st.entities.negocio.Secretaria</class>
+    <class>com.ub.st.entities.negocio.Permiso</class>
+    <class>com.ub.st.entities.negocio.Perfil</class>
+    <class>com.ub.st.entities.negocio.EntidadCoordinada</class>
+    <class>com.ub.st.entities.negocio.CoordinacionGeneral</class>
+    <class>com.ub.st.entities.negocio.OrganismoDescentralizado</class>
+    <class>com.ub.st.entities.negocio.OrganismoDesconcentrado</class>
+    <class>com.ub.st.entities.negocio.Auditoria</class>
+    <class>com.ub.st.entities.negocio.EnteFiscalizador</class>
+    <class>com.ub.st.entities.negocio.EnteFiscalizado</class>
+    <class>com.ub.st.entities.negocio.AreaFiscalizadora</class>
+    <class>com.ub.st.entities.negocio.Observacion</class>
+    <class>com.ub.st.entities.negocio.Seguimiento</class>
+    <class>com.ub.st.entities.negocio.Contratista</class>
+    <class>com.ub.st.entities.negocio.TipoObservacion</class>
+    <class>com.ub.st.entities.negocio.EstatusObservacion</class>
+    <class>com.ub.st.entities.negocio.Programa</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+      <!-- jdbc -->
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/st"/>
+      <!--<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/st"/>-->
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.password" value="Fernand0"/>
+      <!--<property name="javax.persistence.jdbc.password" value="2424"/>-->
+      <!-- eclipse link -->
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+      <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <title>Secretaria de trasparencia API: Auditorias</title>
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!--custom css for these pages-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#apinav">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Secretaria de trasparencia API: Auditorias</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="data.html">Data Types</a></li>
+          <li><a href="downloads.html">Files and Libraries</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar" id="apinav">
+        <ul class="nav nav-sidebar">
+          <li><a href="#resource_Auditorias_eliminar_DELETE">DELETE /auditorias</a></li>
+          <li><a href="#resource_Auditorias_listar_GET">GET /auditorias</a></li>
+          <li><a href="#resource_Auditorias_alta_POST">POST /auditorias</a></li>
+          <li><a href="#resource_Auditorias_modificar_PUT">PUT /auditorias</a></li>
+          <li><a href="#resource_Auditorias_detalle_GET">GET /auditorias/{id}</a></li>
+          <li><a href="#resource_Auditorias_importePendienteAuditoria_GET"><abbr title="GET /auditorias/importePendienteAuditoria/{id}">GET /auditorias/importePendien...</abbr></a></li>
+          <li class="divider"></li>
+          <li class="text-right"><a href="#top"><small>Back to Top</small></a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <ol class="breadcrumb" id="top">
+          <li class="active dropdown"><a href="index.html">Home</a></li>
+          <li class="active dropdown"><a href="resources.html">Resources</a></li>
+          <li class="dropdown"><a href="resource_Auditorias.html">Auditorias</a></li>
+        </ol>
+
+      <h1 class="page-header">Auditorias <small>Resource</small></h1>
+
+      <p>Servicios lcrud para auditorias</p>
+
+      <div id="resource_Auditorias_eliminar_DELETE">
+        <h3><span class="label label-default resource-method">DELETE</span> <span class="resource-path">/auditorias <a href="./api/auditorias" class="glyphicon glyphicon-new-window" target="_blank"></a></span></h3>
+
+        <p>eliminar la entidad proporsionada</p>
+
+        <table class="table resource-parameters">
+          <caption>Request Parameters</caption>
+          <thead>
+          <tr>
+            <th>name</th>
+            <th>type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="parameter-name">Authorization</span></td>
+            <td>header</td>
+            <td><span class="parameter-description">token de sesion</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table resource-request-body">
+          <caption>Request Body</caption>
+          <thead>
+          <tr>
+            <th>media type</th>
+            <th>data type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><abbr data-toggle="tooltip" data-placement="top" title="Use the &quot;Content-Type: application/json&quot; HTTP header to specify this media type to the server."><span class="request-type">application/json</span></abbr></td>
+            <td><span class="datatype-reference"><a href="json_Auditoria.html">Auditoria</a>
+ (JSON)</span></td>
+            <td><span class="request-description">entidad proporsionada</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table resource-response-body">
+          <caption>Response Body</caption>
+          <thead>
+          <tr>
+            <th>media type</th>
+            <th>data type</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><abbr data-toggle="tooltip" data-placement="top" title="Use the &quot;Accept: application/json&quot; HTTP header to request that this media type be provided by the server."><span class="response-type">application/json</span></abbr></td>
+            <td><span class="datatype-reference"><a href="json_ResponseOfAuditoria.html">ResponseOfAuditoria</a>
+ (JSON)</span></td>
+          </tr>
+          </tbody>
+        </table>
+        <h4>Example</h4>
+
+        <div class="container-fluid example panel">
+          <div class="row panel-body">
+            <div class="col-md-6">
+              <h5>Request</h5>
+              <pre>
+DELETE /auditorias
+Content-Type: application/json
+Accept: application/json
+Authorization: ...
+
+                <code class="prettyprint language-js">
+{
+  &quot;id&quot; : 12345,
+  &quot;anioRealiza&quot; : 12345,
+  &quot;anioRevisa&quot; : 12345,
+  &quot;situacionActual&quot; : &quot;...&quot;,
+  &quot;numero&quot; : &quot;...&quot;,
+  &quot;nombre&quot; : &quot;...&quot;,
+  &quot;descripcion&quot; : &quot;...&quot;,
+  &quot;objetivos&quot; : &quot;...&quot;,
+  &quot;enteFiscalizadoList&quot; : [ {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  }, {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  } ],
+  &quot;areaFiscalizadoraList&quot; : [ {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  }, {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  } ],
+  &quot;programaList&quot; : [ {
+    &quot;id&quot; : 12345,
+    &quot;programa&quot; : &quot;...&quot;,
+    &quot;siglas&quot; : &quot;...&quot;,
+    &quot;auditoriaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    } ]
+  }, {
+    &quot;id&quot; : 12345,
+    &quot;programa&quot; : &quot;...&quot;,
+    &quot;siglas&quot; : &quot;...&quot;,
+    &quot;auditoriaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    } ]
+  } ]
+}
+                </code>
+              </pre>
+            </div>
+            <div class="col-md-6">
+              <h5>Response</h5>
+              <pre>
+HTTP/1.1 204 No Content
+Content-Type: application/json
+
+                <code class="prettyprint language-js">
+{
+  &quot;data&quot; : {
+    &quot;id&quot; : 12345,
+    &quot;anioRealiza&quot; : 12345,
+    &quot;anioRevisa&quot; : 12345,
+    &quot;situacionActual&quot; : &quot;...&quot;,
+    &quot;numero&quot; : &quot;...&quot;,
+    &quot;nombre&quot; : &quot;...&quot;,
+    &quot;descripcion&quot; : &quot;...&quot;,
+    &quot;objetivos&quot; : &quot;...&quot;,
+    &quot;enteFiscalizadoList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    } ],
+    &quot;areaFiscalizadoraList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    } ],
+    &quot;programaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;programa&quot; : &quot;...&quot;,
+      &quot;siglas&quot; : &quot;...&quot;,
+      &quot;auditoriaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;programa&quot; : &quot;...&quot;,
+      &quot;siglas&quot; : &quot;...&quot;,
+      &quot;auditoriaList&quot; : [ { }, { } ]
+    } ]
+  },
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;ACCES_DENIED&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
+  }
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="resource_Auditorias_listar_GET">
+        <h3><span class="label label-default resource-method">GET</span> <span class="resource-path">/auditorias <a href="./api/auditorias" class="glyphicon glyphicon-new-window" target="_blank"></a></span></h3>
+
+        <p>proporciona el listado de las entidades de esta clase servicio</p>
+
+        <table class="table resource-parameters">
+          <caption>Request Parameters</caption>
+          <thead>
+          <tr>
+            <th>name</th>
+            <th>type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="parameter-name">Authorization</span></td>
+            <td>header</td>
+            <td><span class="parameter-description">token de sesion</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table resource-response-body">
+          <caption>Response Body</caption>
+          <thead>
+          <tr>
+            <th>media type</th>
+            <th>data type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><abbr data-toggle="tooltip" data-placement="top" title="Use the &quot;Accept: application/json&quot; HTTP header to request that this media type be provided by the server."><span class="response-type">application/json</span></abbr></td>
+            <td><span class="datatype-reference"><a href="json_ResponseOfList.html">ResponseOfList</a>
+ (JSON)</span></td>
+            <td><span class="response-description">reponse, con su campo data asignado con una lista de las entidades de esta clase servicio</span></td>
+          </tr>
+          </tbody>
+        </table>
+        <h4>Example</h4>
+
+        <div class="container-fluid example panel">
+          <div class="row panel-body">
+            <div class="col-md-6">
+              <h5>Request</h5>
+              <pre>
+GET /auditorias
+Accept: application/json
+Authorization: ...
+
+              </pre>
+            </div>
+            <div class="col-md-6">
+              <h5>Response</h5>
+              <pre>
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+                <code class="prettyprint language-js">
+{
+  &quot;data&quot; : [ {
+    &quot;importeObservado&quot; : 12345.0,
+    &quot;importeRecuperado&quot; : 12345.0,
+    &quot;importeAclarado&quot; : 12345.0,
+    &quot;importePendiente&quot; : 12345.0,
+    &quot;enteId&quot; : 12345,
+    &quot;nombreEnte&quot; : &quot;...&quot;
+  }, {
+    &quot;importeObservado&quot; : 12345.0,
+    &quot;importeRecuperado&quot; : 12345.0,
+    &quot;importeAclarado&quot; : 12345.0,
+    &quot;importePendiente&quot; : 12345.0,
+    &quot;enteId&quot; : 12345,
+    &quot;nombreEnte&quot; : &quot;...&quot;
+  } ],
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;INVALID_PARAM&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
+  }
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="resource_Auditorias_alta_POST">
+        <h3><span class="label label-default resource-method">POST</span> <span class="resource-path">/auditorias <a href="./api/auditorias" class="glyphicon glyphicon-new-window" target="_blank"></a></span></h3>
+
+        <p>persiste la entidad de esta clase servicio en base de datos</p>
+
+        <table class="table resource-parameters">
+          <caption>Request Parameters</caption>
+          <thead>
+          <tr>
+            <th>name</th>
+            <th>type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="parameter-name">Authorization</span></td>
+            <td>header</td>
+            <td><span class="parameter-description">token de sesion</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table resource-request-body">
+          <caption>Request Body</caption>
+          <thead>
+          <tr>
+            <th>media type</th>
+            <th>data type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><abbr data-toggle="tooltip" data-placement="top" title="Use the &quot;Content-Type: application/json&quot; HTTP header to specify this media type to the server."><span class="request-type">application/json</span></abbr></td>
+            <td><span class="datatype-reference"><a href="json_Auditoria.html">Auditoria</a>
+ (JSON)</span></td>
+            <td><span class="request-description">entidad a persistir en base de datos</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table resource-response-body">
+          <caption>Response Body</caption>
+          <thead>
+          <tr>
+            <th>media type</th>
+            <th>data type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><abbr data-toggle="tooltip" data-placement="top" title="Use the &quot;Accept: application/json&quot; HTTP header to request that this media type be provided by the server."><span class="response-type">application/json</span></abbr></td>
+            <td><span class="datatype-reference"><a href="json_ResponseOfAuditoria.html">ResponseOfAuditoria</a>
+ (JSON)</span></td>
+            <td><span class="response-description">response con el estatus y el mensaje</span></td>
+          </tr>
+          </tbody>
+        </table>
+        <h4>Example</h4>
+
+        <div class="container-fluid example panel">
+          <div class="row panel-body">
+            <div class="col-md-6">
+              <h5>Request</h5>
+              <pre>
+POST /auditorias
+Content-Type: application/json
+Accept: application/json
+Authorization: ...
+
+                <code class="prettyprint language-js">
+{
+  &quot;id&quot; : 12345,
+  &quot;anioRealiza&quot; : 12345,
+  &quot;anioRevisa&quot; : 12345,
+  &quot;situacionActual&quot; : &quot;...&quot;,
+  &quot;numero&quot; : &quot;...&quot;,
+  &quot;nombre&quot; : &quot;...&quot;,
+  &quot;descripcion&quot; : &quot;...&quot;,
+  &quot;objetivos&quot; : &quot;...&quot;,
+  &quot;enteFiscalizadoList&quot; : [ {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  }, {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  } ],
+  &quot;areaFiscalizadoraList&quot; : [ {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  }, {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  } ],
+  &quot;programaList&quot; : [ {
+    &quot;id&quot; : 12345,
+    &quot;programa&quot; : &quot;...&quot;,
+    &quot;siglas&quot; : &quot;...&quot;,
+    &quot;auditoriaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    } ]
+  }, {
+    &quot;id&quot; : 12345,
+    &quot;programa&quot; : &quot;...&quot;,
+    &quot;siglas&quot; : &quot;...&quot;,
+    &quot;auditoriaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    } ]
+  } ]
+}
+                </code>
+              </pre>
+            </div>
+            <div class="col-md-6">
+              <h5>Response</h5>
+              <pre>
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+                <code class="prettyprint language-js">
+{
+  &quot;data&quot; : {
+    &quot;id&quot; : 12345,
+    &quot;anioRealiza&quot; : 12345,
+    &quot;anioRevisa&quot; : 12345,
+    &quot;situacionActual&quot; : &quot;...&quot;,
+    &quot;numero&quot; : &quot;...&quot;,
+    &quot;nombre&quot; : &quot;...&quot;,
+    &quot;descripcion&quot; : &quot;...&quot;,
+    &quot;objetivos&quot; : &quot;...&quot;,
+    &quot;enteFiscalizadoList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    } ],
+    &quot;areaFiscalizadoraList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    } ],
+    &quot;programaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;programa&quot; : &quot;...&quot;,
+      &quot;siglas&quot; : &quot;...&quot;,
+      &quot;auditoriaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;programa&quot; : &quot;...&quot;,
+      &quot;siglas&quot; : &quot;...&quot;,
+      &quot;auditoriaList&quot; : [ { }, { } ]
+    } ]
+  },
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;ACCES_DENIED&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
+  }
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="resource_Auditorias_modificar_PUT">
+        <h3><span class="label label-default resource-method">PUT</span> <span class="resource-path">/auditorias <a href="./api/auditorias" class="glyphicon glyphicon-new-window" target="_blank"></a></span></h3>
+
+        <p>actualiza la entidad proporsionada a su equivalente en base de datos, tomando como referencia su identificador</p>
+
+        <table class="table resource-parameters">
+          <caption>Request Parameters</caption>
+          <thead>
+          <tr>
+            <th>name</th>
+            <th>type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="parameter-name">Authorization</span></td>
+            <td>header</td>
+            <td><span class="parameter-description">token de sesion</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table resource-request-body">
+          <caption>Request Body</caption>
+          <thead>
+          <tr>
+            <th>media type</th>
+            <th>data type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><abbr data-toggle="tooltip" data-placement="top" title="Use the &quot;Content-Type: application/json&quot; HTTP header to specify this media type to the server."><span class="request-type">application/json</span></abbr></td>
+            <td><span class="datatype-reference"><a href="json_Auditoria.html">Auditoria</a>
+ (JSON)</span></td>
+            <td><span class="request-description">entidad con los datos actualizados</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table resource-response-body">
+          <caption>Response Body</caption>
+          <thead>
+          <tr>
+            <th>media type</th>
+            <th>data type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><abbr data-toggle="tooltip" data-placement="top" title="Use the &quot;Accept: application/json&quot; HTTP header to request that this media type be provided by the server."><span class="response-type">application/json</span></abbr></td>
+            <td><span class="datatype-reference"><a href="json_ResponseOfAuditoria.html">ResponseOfAuditoria</a>
+ (JSON)</span></td>
+            <td><span class="response-description">Response, en data asignado con la entidad que se actualizó</span></td>
+          </tr>
+          </tbody>
+        </table>
+        <h4>Example</h4>
+
+        <div class="container-fluid example panel">
+          <div class="row panel-body">
+            <div class="col-md-6">
+              <h5>Request</h5>
+              <pre>
+PUT /auditorias
+Content-Type: application/json
+Accept: application/json
+Authorization: ...
+
+                <code class="prettyprint language-js">
+{
+  &quot;id&quot; : 12345,
+  &quot;anioRealiza&quot; : 12345,
+  &quot;anioRevisa&quot; : 12345,
+  &quot;situacionActual&quot; : &quot;...&quot;,
+  &quot;numero&quot; : &quot;...&quot;,
+  &quot;nombre&quot; : &quot;...&quot;,
+  &quot;descripcion&quot; : &quot;...&quot;,
+  &quot;objetivos&quot; : &quot;...&quot;,
+  &quot;enteFiscalizadoList&quot; : [ {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  }, {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  } ],
+  &quot;areaFiscalizadoraList&quot; : [ {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  }, {
+    &quot;id&quot; : 12345,
+    &quot;nombre&quot; : &quot;...&quot;
+  } ],
+  &quot;programaList&quot; : [ {
+    &quot;id&quot; : 12345,
+    &quot;programa&quot; : &quot;...&quot;,
+    &quot;siglas&quot; : &quot;...&quot;,
+    &quot;auditoriaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    } ]
+  }, {
+    &quot;id&quot; : 12345,
+    &quot;programa&quot; : &quot;...&quot;,
+    &quot;siglas&quot; : &quot;...&quot;,
+    &quot;auditoriaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;anioRealiza&quot; : 12345,
+      &quot;anioRevisa&quot; : 12345,
+      &quot;situacionActual&quot; : &quot;...&quot;,
+      &quot;numero&quot; : &quot;...&quot;,
+      &quot;nombre&quot; : &quot;...&quot;,
+      &quot;descripcion&quot; : &quot;...&quot;,
+      &quot;objetivos&quot; : &quot;...&quot;,
+      &quot;enteFiscalizadoList&quot; : [ { }, { } ],
+      &quot;areaFiscalizadoraList&quot; : [ { }, { } ],
+      &quot;programaList&quot; : [ { }, { } ]
+    } ]
+  } ]
+}
+                </code>
+              </pre>
+            </div>
+            <div class="col-md-6">
+              <h5>Response</h5>
+              <pre>
+HTTP/1.1 204 No Content
+Content-Type: application/json
+
+                <code class="prettyprint language-js">
+{
+  &quot;data&quot; : {
+    &quot;id&quot; : 12345,
+    &quot;anioRealiza&quot; : 12345,
+    &quot;anioRevisa&quot; : 12345,
+    &quot;situacionActual&quot; : &quot;...&quot;,
+    &quot;numero&quot; : &quot;...&quot;,
+    &quot;nombre&quot; : &quot;...&quot;,
+    &quot;descripcion&quot; : &quot;...&quot;,
+    &quot;objetivos&quot; : &quot;...&quot;,
+    &quot;enteFiscalizadoList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    } ],
+    &quot;areaFiscalizadoraList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    } ],
+    &quot;programaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;programa&quot; : &quot;...&quot;,
+      &quot;siglas&quot; : &quot;...&quot;,
+      &quot;auditoriaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;programa&quot; : &quot;...&quot;,
+      &quot;siglas&quot; : &quot;...&quot;,
+      &quot;auditoriaList&quot; : [ { }, { } ]
+    } ]
+  },
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;ACCES_DENIED&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
+  }
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="resource_Auditorias_detalle_GET">
+        <h3><span class="label label-default resource-method">GET</span> <span class="resource-path">/auditorias/{id} <a href="./api/auditorias/{id}" class="glyphicon glyphicon-new-window" target="_blank"></a></span></h3>
+
+        <p>obtiene una entidad en particular por su identificador de esta clase servicio</p>
+
+        <table class="table resource-parameters">
+          <caption>Request Parameters</caption>
+          <thead>
+          <tr>
+            <th>name</th>
+            <th>type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="parameter-name">Authorization</span></td>
+            <td>header</td>
+            <td><span class="parameter-description">token de sesion</span></td>
+          </tr>
+          <tr>
+            <td><span class="parameter-name">id</span></td>
+            <td>path</td>
+            <td><span class="parameter-description">identificador de la entidad buscada</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table resource-response-body">
+          <caption>Response Body</caption>
+          <thead>
+          <tr>
+            <th>media type</th>
+            <th>data type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><abbr data-toggle="tooltip" data-placement="top" title="Use the &quot;Accept: application/json&quot; HTTP header to request that this media type be provided by the server."><span class="response-type">application/json</span></abbr></td>
+            <td><span class="datatype-reference"><a href="json_ResponseOfAuditoria.html">ResponseOfAuditoria</a>
+ (JSON)</span></td>
+            <td><span class="response-description">response, con su campo data asignado con la entidad buscada</span></td>
+          </tr>
+          </tbody>
+        </table>
+        <h4>Example</h4>
+
+        <div class="container-fluid example panel">
+          <div class="row panel-body">
+            <div class="col-md-6">
+              <h5>Request</h5>
+              <pre>
+GET /auditorias/{id}
+Accept: application/json
+Authorization: ...
+
+              </pre>
+            </div>
+            <div class="col-md-6">
+              <h5>Response</h5>
+              <pre>
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+                <code class="prettyprint language-js">
+{
+  &quot;data&quot; : {
+    &quot;id&quot; : 12345,
+    &quot;anioRealiza&quot; : 12345,
+    &quot;anioRevisa&quot; : 12345,
+    &quot;situacionActual&quot; : &quot;...&quot;,
+    &quot;numero&quot; : &quot;...&quot;,
+    &quot;nombre&quot; : &quot;...&quot;,
+    &quot;descripcion&quot; : &quot;...&quot;,
+    &quot;objetivos&quot; : &quot;...&quot;,
+    &quot;enteFiscalizadoList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    } ],
+    &quot;areaFiscalizadoraList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;nombre&quot; : &quot;...&quot;
+    } ],
+    &quot;programaList&quot; : [ {
+      &quot;id&quot; : 12345,
+      &quot;programa&quot; : &quot;...&quot;,
+      &quot;siglas&quot; : &quot;...&quot;,
+      &quot;auditoriaList&quot; : [ { }, { } ]
+    }, {
+      &quot;id&quot; : 12345,
+      &quot;programa&quot; : &quot;...&quot;,
+      &quot;siglas&quot; : &quot;...&quot;,
+      &quot;auditoriaList&quot; : [ { }, { } ]
+    } ]
+  },
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;ACCES_DENIED&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
+  }
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="resource_Auditorias_importePendienteAuditoria_GET">
+        <h3><span class="label label-default resource-method">GET</span> <span class="resource-path">/auditorias/importePendienteAuditoria/{id} <a href="./api/auditorias/importePendienteAuditoria/{id}" class="glyphicon glyphicon-new-window" target="_blank"></a></span></h3>
+
+        <p>Genera los datos de los importes de una auditoria en particular</p>
+
+        <table class="table resource-parameters">
+          <caption>Request Parameters</caption>
+          <thead>
+          <tr>
+            <th>name</th>
+            <th>type</th>
+            <th>description</th>
+            <th>constraints</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="parameter-name">Authorization</span></td>
+            <td>header</td>
+            <td><span class="parameter-description">token de sesion</span></td>
+            <td><span class="parameter-constraints">&nbsp;</span></td>
+          </tr>
+          <tr>
+            <td><span class="parameter-name">id</span></td>
+            <td>path</td>
+            <td><span class="parameter-description">identificador de la auditoria a generar los importes</span></td>
+            <td><span class="parameter-constraints">int</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table resource-response-body">
+          <caption>Response Body</caption>
+          <thead>
+          <tr>
+            <th>media type</th>
+            <th>data type</th>
+            <th>description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><abbr data-toggle="tooltip" data-placement="top" title="Use the &quot;Accept: application/json&quot; HTTP header to request that this media type be provided by the server."><span class="response-type">application/json</span></abbr></td>
+            <td><span class="datatype-reference"><a href="json_ResponseOfModelImportePendiente.html">ResponseOfModelImportePendiente</a>
+ (JSON)</span></td>
+            <td><span class="response-description">modelo de importes de una auditoria</span></td>
+          </tr>
+          </tbody>
+        </table>
+        <h4>Example</h4>
+
+        <div class="container-fluid example panel">
+          <div class="row panel-body">
+            <div class="col-md-6">
+              <h5>Request</h5>
+              <pre>
+GET /auditorias/importePendienteAuditoria/{id}
+Accept: application/json
+Authorization: ...
+
+              </pre>
+            </div>
+            <div class="col-md-6">
+              <h5>Response</h5>
+              <pre>
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+                <code class="prettyprint language-js">
+{
+  &quot;data&quot; : {
+    &quot;importeObservado&quot; : 12345.0,
+    &quot;importeRecuperado&quot; : 12345.0,
+    &quot;importeAclarado&quot; : 12345.0,
+    &quot;importePendiente&quot; : 12345.0,
+    &quot;enteId&quot; : 12345,
+    &quot;nombreEnte&quot; : &quot;...&quot;
+  },
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;OK&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
+  }
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <footer class="footer">
+          <div class="container">
+            <p class="text-muted">Generated by <a href="http://enunciate.webcohesion.com">Enunciate</a>.</p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JavaScript placed at the end of the document so the pages load faster. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- prettify code blocks. see http://code.google.com/p/google-code-prettify/ -->
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" type="text/javascript"></script>
+  <script>
+    $(function() {
+      $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+      });
+
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+  </script>
+
+</body>
+</html>
