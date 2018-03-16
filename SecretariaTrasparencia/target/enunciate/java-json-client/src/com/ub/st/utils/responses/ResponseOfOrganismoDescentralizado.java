@@ -18,25 +18,9 @@ import com.fasterxml.jackson.annotation.*;
 public class ResponseOfOrganismoDescentralizado implements java.io.Serializable {
 
   @JsonIgnore
-  private com.ub.st.utils.responses.MetaData _meta;
-  @JsonIgnore
   private com.ub.st.entities.negocio.OrganismoDescentralizado _data;
-
-  /**
-   * (no documentation provided)
-   */
-  @JsonProperty( value = "meta", required = false )
-  public com.ub.st.utils.responses.MetaData getMeta() {
-    return this._meta;
-  }
-
-  /**
-   * (no documentation provided)
-   */
-  @JsonProperty( value = "meta", required = false )
-  public void setMeta(com.ub.st.utils.responses.MetaData _meta) {
-    this._meta = _meta;
-  }
+  @JsonIgnore
+  private com.ub.st.utils.responses.MetaData _meta;
 
   /**
    * (no documentation provided)
@@ -52,5 +36,21 @@ public class ResponseOfOrganismoDescentralizado implements java.io.Serializable 
   @JsonProperty( value = "data", required = false )
   public void setData(com.ub.st.entities.negocio.OrganismoDescentralizado _data) {
     this._data = _data;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "meta", required = false )
+  public com.ub.st.utils.responses.MetaData getMeta() {
+    return this._meta;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "meta", required = false )
+  public void setMeta(com.ub.st.utils.responses.MetaData _meta) {
+    this._meta = _meta;
   }
 }

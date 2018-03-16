@@ -1,0 +1,17 @@
+body {
+    font-size: 13px;
+}
+
+.global-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.ui.modals.dimmer {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.white.checkbox label {
+    color: white;
+}

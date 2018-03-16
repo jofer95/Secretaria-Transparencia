@@ -5,6 +5,7 @@
  */
 package com.ub.st.entities.negocio;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ub.st.entities.commons.EntitySQL;
 import java.io.Serializable;
 import java.util.List;
@@ -29,8 +30,9 @@ import javax.validation.constraints.Size;
 @NamedQueries({
     @NamedQuery(name = "Programa.findAll", query = "SELECT p FROM Programa p")})
 public class Programa extends EntitySQL<Integer> implements Serializable {
-
-    @ManyToMany(mappedBy = "programaList")
+    
+    @JsonIgnore
+    @ManyToMany(mappedBy = "programaList")    
     private List<Auditoria> auditoriaList;
 
     private static final long serialVersionUID = 1L;

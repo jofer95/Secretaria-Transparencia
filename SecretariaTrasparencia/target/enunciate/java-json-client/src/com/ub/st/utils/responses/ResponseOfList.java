@@ -18,25 +18,9 @@ import com.fasterxml.jackson.annotation.*;
 public class ResponseOfList implements java.io.Serializable {
 
   @JsonIgnore
-  private java.util.List<com.ub.st.entities.negocio.EstatusObservacion> _data;
-  @JsonIgnore
   private com.ub.st.utils.responses.MetaData _meta;
-
-  /**
-   * (no documentation provided)
-   */
-  @JsonProperty( value = "data", required = false )
-  public java.util.List<com.ub.st.entities.negocio.EstatusObservacion> getData() {
-    return this._data;
-  }
-
-  /**
-   * (no documentation provided)
-   */
-  @JsonProperty( value = "data", required = false )
-  public void setData(java.util.List<com.ub.st.entities.negocio.EstatusObservacion> _data) {
-    this._data = _data;
-  }
+  @JsonIgnore
+  private java.util.List<com.ub.st.entities.negocio.Usuario> _data;
 
   /**
    * (no documentation provided)
@@ -52,5 +36,21 @@ public class ResponseOfList implements java.io.Serializable {
   @JsonProperty( value = "meta", required = false )
   public void setMeta(com.ub.st.utils.responses.MetaData _meta) {
     this._meta = _meta;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "data", required = false )
+  public java.util.List<com.ub.st.entities.negocio.Usuario> getData() {
+    return this._data;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "data", required = false )
+  public void setData(java.util.List<com.ub.st.entities.negocio.Usuario> _data) {
+    this._data = _data;
   }
 }
