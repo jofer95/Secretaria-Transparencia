@@ -20,7 +20,7 @@ public class ResponseOfList implements java.io.Serializable {
   @JsonIgnore
   private com.ub.st.utils.responses.MetaData _meta;
   @JsonIgnore
-  private java.util.List<com.ub.st.entities.negocio.Usuario> _data;
+  private java.util.List<com.ub.st.entities.negocio.Contratista> _data;
 
   /**
    * (no documentation provided)
@@ -42,7 +42,7 @@ public class ResponseOfList implements java.io.Serializable {
    * (no documentation provided)
    */
   @JsonProperty( value = "data", required = false )
-  public java.util.List<com.ub.st.entities.negocio.Usuario> getData() {
+  public java.util.List<com.ub.st.entities.negocio.Contratista> getData() {
     return this._data;
   }
 
@@ -50,7 +50,7 @@ public class ResponseOfList implements java.io.Serializable {
    * (no documentation provided)
    */
   @JsonProperty( value = "data", required = false )
-  public void setData(java.util.List<com.ub.st.entities.negocio.Usuario> _data) {
+  public void setData(java.util.List<com.ub.st.entities.negocio.Contratista> _data) {
     this._data = _data;
   }
 }

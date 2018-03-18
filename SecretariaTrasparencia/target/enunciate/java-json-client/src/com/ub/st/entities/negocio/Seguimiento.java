@@ -37,6 +37,10 @@ public class Seguimiento extends com.ub.st.entities.commons.EntitySQL<java.lang.
   private double _importeRecuperado;
   @JsonIgnore
   private java.lang.String _numeroOficio;
+  @JsonIgnore
+  private java.lang.String _comentario;
+  @JsonIgnore
+  private java.lang.String _numeroOficioEntefiscalizador;
 
   /**
    * (no documentation provided)
@@ -212,5 +216,37 @@ public class Seguimiento extends com.ub.st.entities.commons.EntitySQL<java.lang.
   @JsonProperty( value = "numeroOficio", required = false )
   public void setNumeroOficio(java.lang.String _numeroOficio) {
     this._numeroOficio = _numeroOficio;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "comentario", required = false )
+  public java.lang.String getComentario() {
+    return this._comentario;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "comentario", required = false )
+  public void setComentario(java.lang.String _comentario) {
+    this._comentario = _comentario;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "numeroOficioEntefiscalizador", required = false )
+  public java.lang.String getNumeroOficioEntefiscalizador() {
+    return this._numeroOficioEntefiscalizador;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "numeroOficioEntefiscalizador", required = false )
+  public void setNumeroOficioEntefiscalizador(java.lang.String _numeroOficioEntefiscalizador) {
+    this._numeroOficioEntefiscalizador = _numeroOficioEntefiscalizador;
   }
 }

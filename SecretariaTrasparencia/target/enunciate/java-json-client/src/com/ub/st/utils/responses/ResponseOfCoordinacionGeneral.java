@@ -18,25 +18,9 @@ import com.fasterxml.jackson.annotation.*;
 public class ResponseOfCoordinacionGeneral implements java.io.Serializable {
 
   @JsonIgnore
-  private com.ub.st.entities.negocio.CoordinacionGeneral _data;
-  @JsonIgnore
   private com.ub.st.utils.responses.MetaData _meta;
-
-  /**
-   * (no documentation provided)
-   */
-  @JsonProperty( value = "data", required = false )
-  public com.ub.st.entities.negocio.CoordinacionGeneral getData() {
-    return this._data;
-  }
-
-  /**
-   * (no documentation provided)
-   */
-  @JsonProperty( value = "data", required = false )
-  public void setData(com.ub.st.entities.negocio.CoordinacionGeneral _data) {
-    this._data = _data;
-  }
+  @JsonIgnore
+  private com.ub.st.entities.negocio.CoordinacionGeneral _data;
 
   /**
    * (no documentation provided)
@@ -52,5 +36,21 @@ public class ResponseOfCoordinacionGeneral implements java.io.Serializable {
   @JsonProperty( value = "meta", required = false )
   public void setMeta(com.ub.st.utils.responses.MetaData _meta) {
     this._meta = _meta;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "data", required = false )
+  public com.ub.st.entities.negocio.CoordinacionGeneral getData() {
+    return this._data;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "data", required = false )
+  public void setData(com.ub.st.entities.negocio.CoordinacionGeneral _data) {
+    this._data = _data;
   }
 }

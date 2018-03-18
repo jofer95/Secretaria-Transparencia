@@ -28,7 +28,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Cacheable(false)
 @Table(name = "seguimiento")
-public class Seguimiento extends EntitySQL<Integer> implements Serializable {
+public class Seguimiento extends EntitySQL<Integer> implements Serializable {    
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -78,6 +78,14 @@ public class Seguimiento extends EntitySQL<Integer> implements Serializable {
     private double importeRecuperado;
     @Column(name = "numero_oficio")
     private String numeroOficio;
+    @NotNull
+    @Size(max = 2147483647)
+    @Column(name = "comentario")
+    private String comentario;
+    @NotNull
+    @Size(max = 2147483647)
+    @Column(name = "numero_oficio_entefiscalizador")
+    private String numeroOficioEntefiscalizador;
 
     public Seguimiento() {
     }
@@ -212,6 +220,22 @@ public class Seguimiento extends EntitySQL<Integer> implements Serializable {
     @Override
     public Integer obtenIdEntidad() {
         return id;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+    public String getNumeroOficioEntefiscalizador() {
+        return numeroOficioEntefiscalizador;
+    }
+
+    public void setNumeroOficioEntefiscalizador(String numeroOficioEntefiscalizador) {
+        this.numeroOficioEntefiscalizador = numeroOficioEntefiscalizador;
     }
 
 }
