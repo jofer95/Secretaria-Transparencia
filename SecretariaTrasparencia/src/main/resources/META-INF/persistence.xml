@@ -24,12 +24,15 @@
     <properties>
       <!-- jdbc -->
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-<!--      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.10.2:5432/st"/>-->
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/st"/>
+      <!--<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.10.2:5432/st"/>-->
       <!--<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/st"/>-->
-      <property name="javax.persistence.jdbc.user" value="postgres"/>
-      <property name="javax.persistence.jdbc.password" value="Fernand0"/>
-<!--      <property name="javax.persistence.jdbc.password" value="92Y9B8yh$"/>-->
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ec2-54-201-233-6.us-west-2.compute.amazonaws.com:5432/postgres"/>
+      <!--<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/st"/>-->
+      <!--<property name="javax.persistence.jdbc.user" value="postgres"/>-->
+      <!--<property name="javax.persistence.jdbc.password" value="Fernand0"/>-->
+      <property name="javax.persistence.jdbc.user" value="power_user"/>
+      <property name="javax.persistence.jdbc.password" value="$poweruserpassword"/>
+      <!--<property name="javax.persistence.jdbc.password" value="92Y9B8yh$"/>-->
       <!--<property name="javax.persistence.jdbc.password" value="2424"/>-->
       <!-- eclipse link -->
       <property name="eclipselink.ddl-generation" value="create-tables"/>
