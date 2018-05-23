@@ -165,12 +165,6 @@ Content-Type: application/json
 
                 <code class="prettyprint language-js">
 {
-  &quot;meta&quot; : {
-    &quot;message&quot; : &quot;...&quot;,
-    &quot;status&quot; : &quot;OK&quot;,
-    &quot;devMessage&quot; : &quot;...&quot;,
-    &quot;metaData&quot; : { }
-  },
   &quot;data&quot; : {
     &quot;id&quot; : 12345,
     &quot;nombre&quot; : &quot;...&quot;,
@@ -181,6 +175,12 @@ Content-Type: application/json
       &quot;id&quot; : &quot;...&quot;,
       &quot;descripcion&quot; : &quot;...&quot;
     } ]
+  },
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;PARCIAL_ACCESS&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
   }
 }
                 </code>
@@ -254,78 +254,16 @@ Content-Type: application/json
 {
   &quot;meta&quot; : {
     &quot;message&quot; : &quot;...&quot;,
-    &quot;status&quot; : &quot;ACCES_DENIED&quot;,
+    &quot;status&quot; : &quot;INVALID_PARAM&quot;,
     &quot;devMessage&quot; : &quot;...&quot;,
     &quot;metaData&quot; : { }
   },
   &quot;data&quot; : [ {
     &quot;id&quot; : 12345,
-    &quot;anioRealiza&quot; : 12345,
-    &quot;anioRevisa&quot; : 12345,
-    &quot;situacionActual&quot; : &quot;...&quot;,
-    &quot;numero&quot; : &quot;...&quot;,
-    &quot;nombre&quot; : &quot;...&quot;,
-    &quot;descripcion&quot; : &quot;...&quot;,
-    &quot;objetivos&quot; : &quot;...&quot;,
-    &quot;enteFiscalizadoList&quot; : [ {
-      &quot;id&quot; : 12345,
-      &quot;nombre&quot; : &quot;...&quot;
-    }, {
-      &quot;id&quot; : 12345,
-      &quot;nombre&quot; : &quot;...&quot;
-    } ],
-    &quot;areaFiscalizadoraList&quot; : [ {
-      &quot;id&quot; : 12345,
-      &quot;nombre&quot; : &quot;...&quot;
-    }, {
-      &quot;id&quot; : 12345,
-      &quot;nombre&quot; : &quot;...&quot;
-    } ],
-    &quot;programaList&quot; : [ {
-      &quot;id&quot; : 12345,
-      &quot;programa&quot; : &quot;...&quot;,
-      &quot;siglas&quot; : &quot;...&quot;,
-      &quot;auditoriaList&quot; : [ { }, { } ]
-    }, {
-      &quot;id&quot; : 12345,
-      &quot;programa&quot; : &quot;...&quot;,
-      &quot;siglas&quot; : &quot;...&quot;,
-      &quot;auditoriaList&quot; : [ { }, { } ]
-    } ]
+    &quot;nombre&quot; : &quot;...&quot;
   }, {
     &quot;id&quot; : 12345,
-    &quot;anioRealiza&quot; : 12345,
-    &quot;anioRevisa&quot; : 12345,
-    &quot;situacionActual&quot; : &quot;...&quot;,
-    &quot;numero&quot; : &quot;...&quot;,
-    &quot;nombre&quot; : &quot;...&quot;,
-    &quot;descripcion&quot; : &quot;...&quot;,
-    &quot;objetivos&quot; : &quot;...&quot;,
-    &quot;enteFiscalizadoList&quot; : [ {
-      &quot;id&quot; : 12345,
-      &quot;nombre&quot; : &quot;...&quot;
-    }, {
-      &quot;id&quot; : 12345,
-      &quot;nombre&quot; : &quot;...&quot;
-    } ],
-    &quot;areaFiscalizadoraList&quot; : [ {
-      &quot;id&quot; : 12345,
-      &quot;nombre&quot; : &quot;...&quot;
-    }, {
-      &quot;id&quot; : 12345,
-      &quot;nombre&quot; : &quot;...&quot;
-    } ],
-    &quot;programaList&quot; : [ {
-      &quot;id&quot; : 12345,
-      &quot;programa&quot; : &quot;...&quot;,
-      &quot;siglas&quot; : &quot;...&quot;,
-      &quot;auditoriaList&quot; : [ { }, { } ]
-    }, {
-      &quot;id&quot; : 12345,
-      &quot;programa&quot; : &quot;...&quot;,
-      &quot;siglas&quot; : &quot;...&quot;,
-      &quot;auditoriaList&quot; : [ { }, { } ]
-    } ]
+    &quot;nombre&quot; : &quot;...&quot;
   } ]
 }
                 </code>
@@ -430,12 +368,6 @@ Content-Type: application/json
 
                 <code class="prettyprint language-js">
 {
-  &quot;meta&quot; : {
-    &quot;message&quot; : &quot;...&quot;,
-    &quot;status&quot; : &quot;ACCES_DENIED&quot;,
-    &quot;devMessage&quot; : &quot;...&quot;,
-    &quot;metaData&quot; : { }
-  },
   &quot;data&quot; : {
     &quot;id&quot; : 12345,
     &quot;nombre&quot; : &quot;...&quot;,
@@ -446,6 +378,12 @@ Content-Type: application/json
       &quot;id&quot; : &quot;...&quot;,
       &quot;descripcion&quot; : &quot;...&quot;
     } ]
+  },
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;OK&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
   }
 }
                 </code>
@@ -550,12 +488,6 @@ Content-Type: application/json
 
                 <code class="prettyprint language-js">
 {
-  &quot;meta&quot; : {
-    &quot;message&quot; : &quot;...&quot;,
-    &quot;status&quot; : &quot;ACCES_DENIED&quot;,
-    &quot;devMessage&quot; : &quot;...&quot;,
-    &quot;metaData&quot; : { }
-  },
   &quot;data&quot; : {
     &quot;id&quot; : 12345,
     &quot;nombre&quot; : &quot;...&quot;,
@@ -566,6 +498,12 @@ Content-Type: application/json
       &quot;id&quot; : &quot;...&quot;,
       &quot;descripcion&quot; : &quot;...&quot;
     } ]
+  },
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;WARNING&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
   }
 }
                 </code>
@@ -642,12 +580,6 @@ Content-Type: application/json
 
                 <code class="prettyprint language-js">
 {
-  &quot;meta&quot; : {
-    &quot;message&quot; : &quot;...&quot;,
-    &quot;status&quot; : &quot;ERROR&quot;,
-    &quot;devMessage&quot; : &quot;...&quot;,
-    &quot;metaData&quot; : { }
-  },
   &quot;data&quot; : {
     &quot;id&quot; : 12345,
     &quot;nombre&quot; : &quot;...&quot;,
@@ -658,6 +590,12 @@ Content-Type: application/json
       &quot;id&quot; : &quot;...&quot;,
       &quot;descripcion&quot; : &quot;...&quot;
     } ]
+  },
+  &quot;meta&quot; : {
+    &quot;message&quot; : &quot;...&quot;,
+    &quot;status&quot; : &quot;PARCIAL_ACCESS&quot;,
+    &quot;devMessage&quot; : &quot;...&quot;,
+    &quot;metaData&quot; : { }
   }
 }
                 </code>

@@ -18,25 +18,9 @@ import com.fasterxml.jackson.annotation.*;
 public class ResponseOfModelLogin implements java.io.Serializable {
 
   @JsonIgnore
-  private com.ub.st.models.accesos.ModelLogin _data;
-  @JsonIgnore
   private com.ub.st.utils.responses.MetaData _meta;
-
-  /**
-   * (no documentation provided)
-   */
-  @JsonProperty( value = "data", required = false )
-  public com.ub.st.models.accesos.ModelLogin getData() {
-    return this._data;
-  }
-
-  /**
-   * (no documentation provided)
-   */
-  @JsonProperty( value = "data", required = false )
-  public void setData(com.ub.st.models.accesos.ModelLogin _data) {
-    this._data = _data;
-  }
+  @JsonIgnore
+  private com.ub.st.models.accesos.ModelLogin _data;
 
   /**
    * (no documentation provided)
@@ -52,5 +36,21 @@ public class ResponseOfModelLogin implements java.io.Serializable {
   @JsonProperty( value = "meta", required = false )
   public void setMeta(com.ub.st.utils.responses.MetaData _meta) {
     this._meta = _meta;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "data", required = false )
+  public com.ub.st.models.accesos.ModelLogin getData() {
+    return this._data;
+  }
+
+  /**
+   * (no documentation provided)
+   */
+  @JsonProperty( value = "data", required = false )
+  public void setData(com.ub.st.models.accesos.ModelLogin _data) {
+    this._data = _data;
   }
 }
